@@ -1,22 +1,23 @@
 [tool.poetry]
-name = "certbot-dns-synergy-wholesale"
-version = "1.0.3"
-description = "A Synergy Wholesale DNS plugin for Cerbot to authenticate and retrieve Lets Encrypt certificates"
-authors = ["Nicholas Ciechanowski <nicholasaciechanowski@gmail.com>"]
+name = "certbot-dns-binarylane"
+version = "0.0.1"
+description = "A BinaryLane DNS plugin for Cerbot to authenticate and retrieve Lets Encrypt certificates"
+authors = ["Nicholas Ciechanowski <nicholasaciechanowski@gmail.com>", "Karl Goetz <karl+certbot@medeopolis.au>"]
 license = "Apache-2.0"
 readme = "README.md"
-repository = "https://github.com/ALameLlama/certbot-dns-synergy-wholesale"
+# repository = ""
 
-packages = [{ include = "certbot_dns_synergy_wholesale.py" }]
+packages = [{ include = "certbot_dns_binarylane.py" }]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 certbot = "^2.8.0"
-zeep = "^4.2.1"
+requests = "^2.32.2"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.plugins."certbot.plugins"]
-"dns-synergy-wholesale" = "certbot_dns_synergy_wholesale:Authenticator"
+"dns-binarylane" = "certbot_dns_binarylane:Authenticator"
+
