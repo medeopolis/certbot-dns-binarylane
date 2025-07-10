@@ -21,7 +21,6 @@ class Authenticator(dns_common.DNSAuthenticator):
 
         Required options:
           `name`: name of this plugin; 'binarylane'
-          `config`: TBC
         """
         super().__init__(*args, **kwargs)
         self.credentials: Optional[CredentialsConfiguration] = None

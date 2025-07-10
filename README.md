@@ -17,7 +17,7 @@ Installation
 python3 -m venv /some/path
 
 # Clone the git repository
-git clone (PATH TBC) /path/to/clone
+git clone https://github.com/medeopolis/certbot-dns-binarylane.git /path/to/clone
 
 # Change to newly cloned repository
 cd /path/to/clone
@@ -64,7 +64,7 @@ To acquire a single certificate for both `example.com` and `*.example.com`
 
     certbot certonly \
       --authenticator dns-binarylane \
-      --dns-binarylane-credentials /path/to/credentials.ini \
+      --dns-binarylane-credentials $HOME/.config/binarylane/config.ini \
       -d 'example.com' \
       -d '*.example.com'
 
